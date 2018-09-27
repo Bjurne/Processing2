@@ -33,8 +33,8 @@ void drawSpiral()
   background(255);
   for (int i = 0; i < numberOfPoints; i++)
   {
-    xPos = xCenter + sin(TWO_PI/numberOfPoints * i)*circleRadius+(i*2);
-    yPos = yCenter + cos(TWO_PI/numberOfPoints * i)*circleRadius-(i*2);
+    xPos = xCenter + sin((TAU*3)/numberOfPoints * i)*(circleRadius*i/12);
+    yPos = yCenter + cos((TAU*3)/numberOfPoints * i)*(circleRadius*i/12);
     point(xPos, yPos);
   }
 }
