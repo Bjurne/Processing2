@@ -9,7 +9,7 @@ void gameSetup()
 
 
 	numberOfColumns = (int)Math.floor(width / cellSize);
-	numberOfRows = (int)Math.floor((height - displayAreaSize) / cellSize);
+	numberOfRows = (int)Math.floor(height / cellSize);
 
 	cells = new GameObject[numberOfColumns][numberOfRows];
 

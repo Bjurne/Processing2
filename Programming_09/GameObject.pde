@@ -24,13 +24,13 @@ public class GameObject
 
 	void originalCellColor()
 	{
-		if ((x > width * 0.8) && (y > (height - displayAreaSize) * 0.8))
+		if ((x > width * 0.8) && (y > height * 0.8))
 		{
 			redValue = 255;
 			greenValue = 0;
 			blueValue = 0;
 		}
-		else if ((x < width * 0.2) && (y > (height - displayAreaSize) * 0.8))
+		else if ((x < width * 0.2) && (y > height * 0.8))
 		{
 			redValue = 0;
 			greenValue = 255;
@@ -197,26 +197,4 @@ public class GameObject
 	}
 
 
-	void colorOfCell()
-	{
-		if (alive)
-		{
-			if ((redValue > greenValue) && (redValue > blueValue))
-			{
-				numberOfRedCells++;
-			}
-			if ((greenValue > blueValue) && (greenValue > redValue))
-			{
-				numberOfGreenCells++;
-			}
-			if ((blueValue > redValue) && (blueValue > greenValue))
-			{
-				numberOfBlueCells++;
-			}
-			if ((redValue > blueValue) && (greenValue > blueValue))
-			{
-				numberOfYellowCells++;
-			}
-		}
-	}
 }
